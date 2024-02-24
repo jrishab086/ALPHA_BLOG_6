@@ -1,5 +1,39 @@
 {
   "dependencies": {
-    "bootstrap": "^5.3.3"
-  }
+    "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1",
+    "popper.js": "^1.16.1",
+    "yarn": "^1.22.21"
+  },
+  "name": "alpha_blog_6",
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css:compile": "sass ./app/assets/stylesheets/application.bootstrap.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules",
+    "build:css:prefix": "postcss ./app/assets/builds/application.css --use=autoprefixer --output=./app/assets/builds/application.css",
+    "build:css": "yarn build:css:compile && yarn build:css:prefix",
+    "watch:css": "nodemon --watch ./app/assets/stylesheets/ --ext scss --exec \"yarn build:css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrishab086/ALPHA_BLOG_6.git"
+  },
+  "keywords": [
+
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jrishab086/ALPHA_BLOG_6/issues"
+  },
+  "homepage": "https://github.com/jrishab086/ALPHA_BLOG_6#readme",
+  "browserslist": [
+    "defaults"
+  ]
 }
